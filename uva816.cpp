@@ -69,8 +69,7 @@ node next(node& u, int turn)
 }
 
 void init()
-{ is_circular = 0;
-  memset(M, 0, sizeof(M));
+{ memset(M, 0, sizeof(M));
   for(int i = 0; i < 10; ++i)
   for(int j = 0; j < 10; ++j)
   for(int k = 0; k < 10; ++k)
