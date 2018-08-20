@@ -1,0 +1,14 @@
+todo test:
+	uva999
+todo:
+	uva548 (using c stdio version in trash/; figure out why TLE)
+	uva1193 (another range of greedy interval problems; might make do with 'sliding window')
+  uva311 (case-by-case)
+	uva210 (tle...)
+TODO Rewrite
+-uva10440 (do using recursion??? greedy; pay attention to the details)
+-uva10020 (junk judge; but pay attention to the details)
+
+Review:
+-uva11264 (rewrote from n^2 to n due to monotonicity)
+-uva10602 - another way of doing this?
