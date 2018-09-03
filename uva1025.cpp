@@ -6,19 +6,11 @@
 #include <utility>
 #include <memory.h>
 using namespace std;
-int D[51], t1[51], tN[51], N, T, M1, M2, m[51][201], in[51][201][2];
+int D[51], t1[51], tN[51], N, T, M1, M2, m[51][1000], in[51][1000][2];
 int k = 0;
 int opt(int i, int t);
 int _opt(int i, int t)
-{ //printf("opt=%d,%d\n",i,t); 
-	if (t == T) {
-		if (i == N) return 0;
-		else return 0xfffff;
-	} else if (t >= T) return 0xfffff;
-	if (i < 1 || i > N) {
-//		printf("AHHHHHH\n"); exit(1);
-		return 0xffffff;
-	}
+{
 	int ans = opt(i, t+1) + 1;
 	if (in[i][t][0])
 		ans = min(ans, opt(i-1, t+D[i-1]));
@@ -28,7 +20,15 @@ int _opt(int i, int t)
 	return ans;
 }
 int opt(int i, int t)
-{
+{ //printf("opt=%d,%d\n",i,t); 
+	if (t == T) {
+		if (i == N) return 0;
+		else return 0xfffff;
+	} else if (t >= T) return 0xfffff;
+	if (i < 1 || i > N) {
+		//		printf("AHHHHHH\n"); exit(1);
+		return 0xffffff;
+	}
 	if (m[i][t] != -1) return m[i][t];
 	else return m[i][t]=_opt(i, t);
 }
@@ -54,7 +54,7 @@ int main()
 				in[j][t][0] = 1; // right to left trains
 			}
 		for(int i = 0; i < 51; ++i)
-			for(int j = 0; j < 201; ++j)
+			for(int j = 0; j < 1000; ++j)
 				m[i][j] = -1;
 		int ans = opt(1, 0);
 		cout << "Case Number " << c;
