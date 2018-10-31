@@ -5,7 +5,7 @@
 using namespace std;
 // union-find-disjoint set
 // for generic content
-// technically a poset
+// similar to a poset
 template <typename T>
 struct disjoint_set
 {
@@ -25,9 +25,14 @@ struct disjoint_set
     return data[idx];
   }
 
+  T at(long i)
+  {
+    return data[i];
+  }
+
   bool eq(long i, long j)
   {
-    return find(i) == find(j);
+    return data[find(i)] == data[find(j)];
   }
 
   void merge(long i, long j)
