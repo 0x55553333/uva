@@ -10,7 +10,8 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `bit_array.cpp` - Scalable bitset implementation (supports growing/shrinking, like a vector of bits)
   - `circular_primes.c	` - Circular primes sieve
   - `doubly_linked_array.cpp` - Array-based linked list implementation with O(1) query time for neighbor relationships
-  - `equipartition.cpp` - Set partitioning problem using Horowitz-Sahni O(n*2^(n/2))-time algorithm for subset sum
+  - `equipartition.cpp` - Set partitioning problem using Horowitz-Sahni O(n 2^(n/2))-time algorithm for subset sum
+  - `ufd_generic.cpp` -- Generic union-find-disjoint sets; they support storing any type within a UFD-like structure for fast parent query
   - `floodfill_graph.cpp` - Convert adjacencies between 0s and 1s in mesh graph into a graph
   - `interval_covering.cpp` - Greedy interval covering algorithm without nested loop 
   - `lis.cpp` - Longest Increasing Subsequence in O(n log n) time using patience sorting
