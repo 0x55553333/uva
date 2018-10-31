@@ -5,7 +5,6 @@
 using namespace std;
 // union-find-disjoint set
 // for generic content
-// similar to a poset
 template <typename T>
 struct disjoint_set
 {
