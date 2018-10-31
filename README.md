@@ -20,6 +20,6 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `subset_sum.cpp` - The Horowitz-Sahni algorithm for subset-sum
   - `sum_seg_tree.cpp` - Plug-n-play Template Library implementation of generic segment tree for Range Sum Query, supports single updates (todo: lazy propagation)
   - `ufd.cpp` - Union-find-disjoint sets, todo optimize.
-
+  - `bit.cpp` - Binary-indexed tree supporting generics.
 Comments are in the `comments/` folder. All submissions are compiled with UVa's c++11 option.
 
