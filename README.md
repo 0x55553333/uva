@@ -21,5 +21,6 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `sum_seg_tree.cpp` - Plug-n-play Template Library implementation of generic segment tree for Range Sum Query, supports single updates (todo: lazy propagation)
   - `ufd.cpp` - Union-find-disjoint sets, todo optimize.
   - `bit.cpp` - Binary-indexed tree supporting generics.
+  - `quadrangle.cpp` - Quadrangle Inequality speedup for Optimal BST problem based on UVa10304 (fully-recursive memoized implementation; better readability than the diagonal-by-diagonal iterative version).
 Comments are in the `comments/` folder. All submissions are compiled with UVa's c++11 option.
 
