@@ -15,6 +15,8 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `floodfill_graph.cpp` - Convert adjacencies between 0s and 1s in mesh graph into a graph
   - `interval_covering.cpp` - Greedy interval covering algorithm without nested loop 
   - `lis.cpp` - Longest Increasing Subsequence in O(n log n) time using patience sorting
+  - `LIS1.cpp` - Longest Increasing Subsequence in O(n log n) time and O(n) space using the Young Tableau technique (Fredman 1975)
+  - `LIS2.cpp` - Longest Increasing Subsequence in O(n^2) time and O(n) space using the Young Tableau technique (Fredman 1975, w/o binary search)
   - `min_seg_tree.cpp` - Plug-n-play Template Library implementation of generic segment tree for Range Minimum Query, supports single updates (todo: lazy range updates)
   - `primes.h` - HUGE header file containing a BUNCH of primes
   - `subset_sum.cpp` - The Horowitz-Sahni algorithm for subset-sum
@@ -22,5 +24,8 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `ufd.cpp` - Union-find-disjoint sets, todo optimize.
   - `bit.cpp` - Binary-indexed tree supporting generics.
   - `quadrangle.cpp` - Quadrangle Inequality speedup for Optimal BST problem based on UVa10304 (fully-recursive memoized implementation; better readability than the diagonal-by-diagonal iterative version).
+
+  
+  
 Comments are in the `comments/` folder. All submissions are compiled with UVa's c++11 option.
 
