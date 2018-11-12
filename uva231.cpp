@@ -18,7 +18,7 @@ void insert_or_replace(int x)
   //  printf("YT[%d]=%d; YT[%d]=%d\n", K-1, YT[K-1], K, YT[K]);
     return;
   }
-  int L = 0, R = n-1, M;
+  int L = 0, R = K, M;
   while (L < R) {
     M = L + (R - L) / 2;
     if (!B[M] || x > YT[M])
