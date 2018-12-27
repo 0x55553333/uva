@@ -7,6 +7,12 @@
 #include <memory.h>
 using namespace std;
 #define MAXN 100 
+
+// DFS to find minimum distance 
+// between two characters in
+// a grid cell where 
+// '.' denotes a valid path
+
 int N, memo[700][MAXN][MAXN];
 char grid[MAXN][MAXN];
 char src, tgt;
