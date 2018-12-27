@@ -13,7 +13,7 @@ struct treap {
   struct _Node {
     _Node()
     { this->lch = this->rch = NULL;
-      this->rank = rand(); maintain(); }
+      this->rank = rand(); this->size = 1; }
     void maintain()
     {
       printf("maintain: maintaining tree of val:");
@@ -39,7 +39,9 @@ struct treap {
   { srand(time(NULL));
     this->root = NULL; }
   ~treap()
-  { this->root->purge();
+  { if (this->root!=NULL)
+    this->root->purge();
+    if (this->root!=NULL)
     delete this->root; }
   void rotate_left(_Node*& o)
   { if (o->rch == NULL) return;
@@ -76,7 +78,8 @@ struct treap {
   void insert(T x)
   { this->insert(root, x); }
   void remove(_Node*&o, T& x)
-  { if (x == o->val) {
+  { if (o==NULL)return;
+    if (x == o->val) {
       if (o->lch == NULL) o = o->rch;
       else if (o->rch == NULL) o = o->lch;
       else {
@@ -98,7 +101,8 @@ struct treap {
   void remove(T x)
   { this->remove(root, x); }
   _Node* find(_Node* o, T& x)
-  { if (o->val == x) return o;
+  { if(o==NULL)return NULL;
+    if (o->val == x) return o;
     else if (x < o->val) {
       if (o->lch == NULL) return NULL;
       else return find(o->lch, x);
@@ -108,7 +112,7 @@ struct treap {
   _Node* find(T x) 
   { return this->find(root, x); }
   _Node* kth(_Node* o, unsigned long k) // Find o s.t. o->s+1=k
-  {
+  { if(o==NULL)return NULL;
     unsigned long order = o->rch == NULL ? 0 : o->rch->size + 1;
     if (o->size < k) return NULL;
     else if (k <= order) {
@@ -122,7 +126,7 @@ struct treap {
   _Node* kth(unsigned long k)
   { return this->kth(root, k); }
   unsigned long rank(_Node* o, T& x)
-  {
+  { if (o==NULL)return 0;
     if (o->val == x) {
       unsigned long r = o->lch == NULL ? 0 : o->lch->size;
       return (unsigned long) r;
