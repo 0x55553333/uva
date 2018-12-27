@@ -21,7 +21,7 @@ int min_dist(int i, int j, char t);
 int _min_dist(int i, int j, char t)
 {
 //  printf("called: %d, %d, %c, memo val=%d\n", i, j, t, memo[t][i][j]);
-  if (grid[i][j] == t) return 0;
+  if (grid[i][j] == t) return 1;
   if (grid[i][j] != '.') return 0xffff;
   grid[i][j] = '!';
   int north = min_dist(i+1, j, t),
