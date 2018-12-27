@@ -24,7 +24,7 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `ufd.cpp` - Union-find-disjoint sets, todo optimize.
   - `bit.cpp` - Binary-indexed tree supporting generics.
   - `quadrangle.cpp` - Quadrangle Inequality speedup for Optimal BST problem based on UVa10304 (fully-recursive memoized implementation; better readability than the diagonal-by-diagonal iterative version).
-
+  - `treap.cpp` - Treap in increasing order with order statistic functions. Rank/kth Not yet correct but treap is ready.
   
   
 Comments are in the `comments/` folder. All submissions are compiled with UVa's c++11 option.
