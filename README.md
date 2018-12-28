@@ -28,6 +28,7 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `wavelet1.cpp` - reference wavelet tree implementation with order statistic functions
   - `dfs_grid.cpp` - Memoized DFS for finding MSSP on an input grid/maze
   - `bfs_grid.cpp` - BFS with path printing functionality for finding MSSP on an input grid/maze
-  
+  - `maxflow.cpp` - Find max-flow using Edmonds-Karp
+  - `MCMF.cpp` - find min-cost-max-flow using Edmonds-Karp + Bellman-Ford
 Comments are in the `comments/` folder. All submissions are compiled with UVa's c++11 option.
 
