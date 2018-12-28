@@ -45,6 +45,21 @@ int bfs(char s, char t)
         }
     }
   }
+  for(int i = 0; i < N; ++i)
+    for(int j = 0; j < N; ++j) 
+      if (grid[i][j] == t && 
+          dist[i][j] == minCost) {
+        int pi = parent[i][j][0],
+          pj = parent[i][j][1];
+        grid[i][j] = '*';
+        while (parent[pi][pj][0] != -1) {
+          grid[pi][pj] = '>';
+          pi = parent[pi][pj][0];
+          pj = parent[pi][pj][1];
+        }
+        grid[pi][pj] = '*';
+        return minCost;
+      }
   return minCost;
 }
 
@@ -56,7 +71,12 @@ int main()
   while (cin >> s >> t) {
     if (s == '$' || t == '$') break;
     int cost = bfs(s, t);
-    printf("%d\n", cost);
+    for(int i = 0; i < N; ++i)
+      printf("%s\n", grid[i]);
+    if (cost >= 0xfffff) 
+      printf("No route\n");
+    else
+      printf("%d\n", cost);
   }
   return 0;
 }
