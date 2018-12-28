@@ -48,14 +48,16 @@ int bbfs(graph& g, int s, int t, int* L, int* R)
 			j = back.front(); back.pop();
 			if (k == j) break;
 			for(const int& adj : g.list[k]) {
-				if (L[adj] > L[k]+1)
+				if (L[adj] > L[k]+1) {
 					L[adj] = L[k] + 1;
-				front.push(adj);
+				  front.push(adj);
+        }
 			}
 			for(const int& adj : g.list[j]) {
-				if (R[adj] > R[j] + 1)
+				if (R[adj] > R[j] + 1) {
 					R[adj] = R[j] + 1;
-				back.push(adj);
+				  back.push(adj);
+        }
 			}
 		}
 		if (k != j) return -1;
