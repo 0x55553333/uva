@@ -32,5 +32,6 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `MCMF.cpp` - find min-cost-max-flow using Edmonds-Karp + Bellman-Ford
   - `dijkstra.cpp` - Dijkstra's algorithm for SSSP
   - `bellman_ford.cpp` - Bellman-Ford's algorithm for SSSP with negative weights  
+  - `fw.cpp` - Floyd's algorithm for APSP and Warshall's algorithm for transitive closure
 Comments are in the `comments/` folder. All submissions are compiled with UVa's c++11 option.
 
