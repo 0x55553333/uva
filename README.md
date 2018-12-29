@@ -30,5 +30,6 @@ A bunch of useful data structures are in the `https://github.com/0x55553333/uva/
   - `bfs_grid.cpp` - BFS with path printing functionality for finding MSSP on an input grid/maze
   - `maxflow.cpp` - Find max-flow using Edmonds-Karp
   - `MCMF.cpp` - find min-cost-max-flow using Edmonds-Karp + Bellman-Ford
+  - `dijkstra.cpp` - Dijkstra's algorithm for SSSP
 Comments are in the `comments/` folder. All submissions are compiled with UVa's c++11 option.
 
