@@ -12,17 +12,20 @@ using namespace std;
 template <typename T>
 struct skip_list
 {
-  long h;
-  vector<T> entry;
-  vector<long> left;
-  vector<long> right;
-  vector<long> ptr;
-  vector<long> tree;
-  vector<long> node_count;
+  long h, size, begin, end;
   random_device rng;
   mt19937 rng_mt;
   uniform_real_distribution<double> range;
   double p;
+
+  struct entry_t {
+    long top, down, left, right;
+    entry_t() {
+      top = down = left = right = 0;
+    }
+  };
+  vector<T> data;
+  vector<entry> nodes;
 
   long get_level(double prob)
   {
@@ -36,14 +39,13 @@ struct skip_list
      
   }
 
-  skip_list(size_t n, long h, double p) 
+  skip_list(long h, double p) 
     : rng{}, rng_mt{rng}, range{0.0, 1.0}
   {
-    this->entry.assign();
-    this->node_count.assign(h, 0);
     this->p = p;
-    for(long i = 1, double pp = p; i < h; ++i, pp *= p)
-      this->node_count[i] = lround(pp * n) + 1;
+        
+    //for(long i = 1, double pp = p; i < h; ++i, pp *= p)
+    //  this->node_count[i] = lround(pp * n) + 1;
   }
 
 };
