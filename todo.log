@@ -6,6 +6,9 @@ TODO Rewrite
 -uva10440 (do using recursion??? greedy; pay attention to the details)
 -uva10020 (junk judge; but pay attention to the details)
 
+TODO new:
+  uva1437.cpp (CYK version?)
+
 Review:
 -uva11264 (rewrote from n^2 to n due to monotonicity)
 -uva10602 - another way of doing this?
