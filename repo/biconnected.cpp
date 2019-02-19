@@ -30,9 +30,9 @@ void dfs(int u, int p)
         ++bcc_cnt;
         while (!S.empty()) {
           pair<int,int> e = S.top(); S.pop();
-          bcc[p.second] = bcc_cnt;
-          bcc[p.first] = bcc_cnt;
-          if (p.first == u && p.second == v) break;
+          bccno[e.second] = bcc_cnt;
+          bccno[e.first] = bcc_cnt;
+          if (e.first == u && e.second == v) break;
         }
       }
     } else if (pre[v] < pre[u] && v != p) {
