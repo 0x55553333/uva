@@ -1,4 +1,6 @@
-// 2-way in-shuffle
+// 2-way in-place in-shuffle 
+// in O(N)-time
+// uses 2N+1 swaps
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -12,10 +14,10 @@ typedef pair<char, int> Item;
 string indent = "";
 vector<int> apos, bpos;
 vector<Item> A;
-int N;
+int N, exchs;
 
 void print_shuffle()
-{
+{ ++exchs;
   cout << indent;
   for(int i = 1; i <A.size(); ++i ){
     printf(" %c%d ", A[i].first, A[i].second);
@@ -25,7 +27,7 @@ void print_shuffle()
 
 void two_way_in_shuffle(Item e, int i)
 { //printf("shuffle(%c,%d):", e.first, e.second);
-  if (i == 2 * N || A[i] == e) {
+  if (i == A.size()) {
     print_shuffle(); return;
   }
   int t, tidx; Item te, e1;
@@ -71,6 +73,7 @@ int main()
   print_shuffle();
   indent += " ";
   two_way_in_shuffle(make_pair('b',1), 1);
+  printf("total exchanges = %d\n", exchs - 1);
   return 0;
 }
 
